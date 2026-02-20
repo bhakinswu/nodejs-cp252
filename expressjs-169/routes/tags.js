@@ -4,5 +4,4 @@ const tagsController = require('../controllers/tagsController');
 
 router.get('/', tagsController.getTags);
 // Add other routes related to tags
-
 module.exports = router;
