@@ -3,9 +3,9 @@ class Expense {
    Represents a Expense.
    @constructor
    @param {date} date - The date of the expense.
-   @param {float} income - The author of the book.
-   @param {float} expense - expense of the book.
-   @param {string} detail - detail of the book
+   @param {float} income - The income of the book.
+   @param {float} expense - The expense of the book.
+   @param {string} detail - The detail of the book.
  */
   constructor(date, income, expense, detail) {
     this.date = date;
@@ -34,8 +34,8 @@ class ExpenseModel {
   }
 
 /**
- * return expense numbers from stack.
- * @
+ * 
+ * @return expense numbers from stack.
  *  {array} expense - array of positive number
  */
 
@@ -44,25 +44,25 @@ class ExpenseModel {
   }
 
 /**
- * return total income.
- * @return {float} income - A positive number
+ * return the total sum of all income entries.
+ * @return {float} the total income amount
  */
   getTotalIncome() {
     return this.expenses.reduce((sum, exp) => sum + exp.income, 0);
   }
 
   /**
- * return total expense.
- * @return {float} expense - A positive number
+ * return the total sum of all expense entries.
+ * @return {float} The total expense amount.
  */
 
   getTotalExpense() {
     return this.expenses.reduce((sum, exp) => sum + exp.expense, 0);
   }
 
-    /**
- * return how many money left.
- * @return {float} Money left - get total money by Income - Expense.
+/**
+ * return the remaining balance
+ * @return {float} (Total Income - Total Expense) The net balance amount.
  */
 
   getMoneyLeft() {
