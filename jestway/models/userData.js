@@ -22,18 +22,17 @@ class UserData {
     removeOneUser() {
         if ( this.users.length > 0 ) {
             return this.users.pop();
-        }else{
-            return null
-        }       
+        }      
     }
 
     removeTwoUser() {
         if ( this.users.length > 1 ) {
-            removeOneUser();
-            removeOneUser();
+            this.users.pop();
+            this.users.pop();
+            return null;
         }else{
-            return null
-        }       
+            return null;
+        }
     }
 
 
