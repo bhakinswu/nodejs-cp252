@@ -1,11 +1,15 @@
-name: NodeJS with Webpack
+name: Build and Test
 
+# Manual trigger only - to enable automatic triggers, uncomment one of these:
 # on:
 #   push:
 #     branches: [ "main" ]
 #   pull_request:
 #     branches: [ "main" ]
 
+on:
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
